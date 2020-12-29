@@ -1,12 +1,8 @@
 body {
-    background-color: #333333;
+    background-color: #222831;
     color: white;
 }
 
-h1 {
-    font-family: 'Roboto Mono', monospace;
-    color: white;
-}
 
 h4 {
     font-family: 'Barlow Condensed', sans-serif;
@@ -18,38 +14,42 @@ h6 {
 }
 
 hr {
-    color: #FF851B;
+    color: #cccccc;
     width: 50%;
+}
+
+h2 {
+    color: #944e6c;
 }
 
 
 
 #homeBtn {
-    color: white;
+    color: #fcdab7;
     margin: 10%;
    font-size: 30px; 
 }
 
 #homeBtn:hover {
-    color: #FF851B;
+    color: #1e5f74;
     
 }
 
 a:hover {
-    color: #FF851B;
+    color: #1e5f74;
     
 }
 
 .btn:hover {
     color: #333333;
-    border: 3px dashed #FF851B;
-    background-color: #FF851B;
+    border: 3px dashed #e9c496;
+    background-color: #e9c496;
     
 }
 
 .btn {
     width: 110px;
-    border: 3px dashed #FF851B;
+    border: 3px dashed #e9c496;
     color: white;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: x-large;
@@ -57,30 +57,10 @@ a:hover {
 
 }
 
-
-#arrayZeroPer {
-    color: #FF4136;
-
+#demo {
+    color: #fa9579;
 }
 
-#arrayZero {
-    color: #85144b;
-
-}
-
-#arrayOnePer {
-    color: #2ECC40;
-}
-
-#arrayOne {
-    color: #3D9970;
-
-}
-
-#arrayTwoPer {
-    color: #0074D9;
-}
-
-#arrayTwo {
-    color: #39CCCC;
+h5 {
+    color: #ffe9d6;
 }

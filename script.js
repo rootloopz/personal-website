@@ -23,13 +23,15 @@ $.ajax({
     url: 'https://wakatime.com/share/@1f3e5ab8-5278-4e95-bdc3-0c136d039366/41a99696-d566-4661-ba42-4ca00aa973fd.json',
     dataType: 'jsonp',
     success: function(response) {
-      document.getElementById("arrayZero").innerHTML = response.data[0].name;
-      document.getElementById("arrayZeroPer").innerHTML = response.data[0].percent + "%";
-      document.getElementById("arrayOne").innerHTML = response.data[1].name;
-      document.getElementById("arrayOnePer").innerHTML = response.data[1].percent + "%";
-      document.getElementById("arrayTwo").innerHTML = response.data[2].name;
-      document.getElementById("arrayTwoPer").innerHTML = response.data[2].percent + "%";
-    },
+    var jsonarray = response.data;
+    var text = "";
+    var i;
+    for(i = 0; i < jsonarray.length; i++) {
+        text += i+1 + ") " + response.data[i].name + " ---- "  + " Percentage: " + response.data[i].percent + "%" + "<br>";
+
+    }
+    document.getElementById("demo").innerHTML = text;
+  },
   });
 
 
