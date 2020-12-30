@@ -27,26 +27,38 @@ $.ajax({
     var text = "";
     var i;
     for(i = 0; i < jsonarray.length; i++) {
-        text += i+1 + ") " + response.data[i].name + " ---- "  + " Percentage: " + response.data[i].percent + "%" + "<br>";
+        text += i+1 + ") " + response.data[i].name + " ---- "  + " " + response.data[i].percent + "%" + "<br>";
 
     }
     document.getElementById("demo").innerHTML = text;
   },
   });
 
-
-
-
   $.ajax({
     type: 'GET',
     url: 'https://wakatime.com/share/@1f3e5ab8-5278-4e95-bdc3-0c136d039366/4c7f2f65-20cf-4098-bbde-a90c33787352.json',
     dataType: 'jsonp',
     success: function(response) {
-      let totalTime = response.data[0].grand_total.total_seconds + response.data[1].grand_total.total_seconds + response.data[2].grand_total.total_seconds + response.data[3].grand_total.total_seconds + response.data[4].grand_total.total_seconds + response.data[5].grand_total.total_seconds + response.data[6].grand_total.total_seconds;
+      var dataArr = response.data;
+      var array = [];
+      var p;
+      let totalTime;
+
+      // adds seconds to array
+      for(p = 0; p < dataArr.length; p++){
+        array.push(response.data[p].grand_total.total_seconds);
+      }
+
+      // adds all values of array to caculate HH:MM:SS
+
+      var sum = array.reduce(function(a, b){
+        return a + b;
+    }, 0);
+    
+    totalTime = sum;
 
       let newTotal = new Date(totalTime * 1000).toISOString().substr(11, 8);
         document.getElementById('totalTime').innerHTML = newTotal;
     
-
     },
   });
