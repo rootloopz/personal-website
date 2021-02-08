@@ -22,8 +22,6 @@ h2 {
     color: #944e6c;
 }
 
-
-
 #homeBtn {
     color: #fcdab7;
     margin: 10%;
@@ -63,4 +61,8 @@ a:hover {
 
 h5 {
     color: #ffe9d6;
+}
+
+#totalTime {
+    color: #5400d6;
 }
