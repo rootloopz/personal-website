@@ -26,7 +26,7 @@ $.ajax({
     var jsonarray = response.data;
     var text = "";
     var i;
-    for (i = 0; i < 5; i++) {
+    for (i = 0; i < jsonarray.length; i++) {
       text += i + 1 + ") " + response.data[i].name + " ---- " + " " + response.data[i].percent + "%" + "<br>";
 
     }
